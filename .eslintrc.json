@@ -17,5 +17,9 @@
   "env":{
     // https://eslint.vuejs.org/user-guide/#faq
     "vue/setup-compiler-macros": true
+  },
+  "rules": {
+    "no-unused-vars" : "off" , 
+    "@typescript-eslint/no-unused-vars" : 0 
   }
 }
