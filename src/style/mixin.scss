@@ -1,0 +1,37 @@
+$namespace: 'el';
+$state-prefix: 'is-';
+
+$--header-padding: 0 20px;
+$--bottom-padding: 0 20px;
+
+// color
+$--color-white: #fff!default;
+$--color-text-regular: #606266 !default;
+$--color-text-placeholder: #c0c4cc !default;
+$--color-base: #dcdfe6 !default;
+$--border-color-base: #dcdfe6 !default;
+$--bottom-default-border-color: $--border-color-base !default;
+
+$--color-primary: #409eff !default;
+$--color-white: #ffffff !default;
+$--color-black: #000000 !default;
+$--color-success: #67c23a !default;
+$--color-warning: #e6a23c !default;
+$--color-danger: #f56c6c !default;
+$--color-info: #909399 !default;
+
+
+@mixin className($name) {
+  $className: $namespace + '-' + $name !global;
+  .#{$className} {
+    @content;
+  }
+}
+
+@mixin has($state) {
+  @at-root {
+    &.#{$state-prefix + $state} {
+      @content;
+    }
+  }
+}
