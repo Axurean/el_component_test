@@ -21,3 +21,11 @@
     <slot />
   </header>
 </template>
+<style lang="scss">
+  @import '../../style/mixin.scss';
+  @include className(header) {
+    padding: $--header-padding;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+</style>

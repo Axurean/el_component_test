@@ -3,12 +3,12 @@
     name: 'ElAside'
   }
 </script>
-<script setup lang="ts">
+<script lang="ts" setup>
   import { withDefaults } from 'vue'
-  type propsValue = {
-    width: string
+  interface Props {
+    width?: string
   }
-  withDefaults(defineProps<propsValue>(), {
+  withDefaults(defineProps<Props>(), {
     width: '300px'
   })
 </script>
@@ -21,3 +21,12 @@
     <slot />
   </aside>
 </template>
+
+<style lang="scss">
+  @import '../../style/mixin.scss';
+  @include className(aside) {
+    overflow: auto;
+    box-sizing: border-box;
+    flex-shrink: 0;
+  }
+</style>

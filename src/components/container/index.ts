@@ -1,5 +1,5 @@
 import Aside from './aside.vue'
-import Footer from './Footer.vue'
+import Footer from './footer.vue'
 import Header from './header.vue'
 import Container from './container.vue'
 import Main from './main.vue'

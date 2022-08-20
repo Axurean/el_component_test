@@ -4,7 +4,7 @@
   }
 </script>
 
-<script lang="ts">
+<script lang="ts" setup>
   import { withDefaults } from 'vue'
 
   interface Props {
@@ -24,3 +24,14 @@
     <slot />
   </footer>
 </template>
+<style lang="scss">
+  @import '../../style/mixin.scss'; 
+  @include className(footer) {
+    padding: $--footer-padding;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    @include m(inner){
+      width:300px;
+    }
+  }
+</style>

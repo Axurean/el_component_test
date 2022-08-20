@@ -1,6 +1,6 @@
 <script lang="ts">
 export default {
-  name: 'ElMain'
+  name: 'ElContainer'
 }
 </script>
 <script lang="ts" setup>
@@ -17,11 +17,7 @@ export default {
         return tag === 'ElHeader' || tag === 'ElFooter'
       })
     } else {
-      if (props.direction === 'vertical') {
-        return true
-      } else  {
-        return false
-      }
+      return props.direction === 'vertical'
     }
   })
 </script>
