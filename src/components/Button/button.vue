@@ -4,18 +4,18 @@
   }
 </script>
 
-<script setup>
+<script setup lang="ts">
   import { withDefaults, computed } from 'vue'
   interface Props {
-    size:? '' | 'small' | 'medium' | 'mini',
-    tyle:? '' | 'primary' | 'success' | 'danger'
+    size?: '' | 'small' | 'medium' | 'mini',
+    type?: '' | 'primary' | 'success' | 'danger'
   }
   const props = withDefaults(defineProps<Props>(), {
     size: '',
     type: ''
   })
   const buttonSize = computed(() => props.size || '')
-  const buttonType = computed(() => props.tyle || '')
+  const buttonType = computed(() => props.type || '')
 </script>
 <template>
   <button
